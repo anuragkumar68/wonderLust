@@ -1,0 +1,41 @@
+<%layout("layouts/boilerplate")%>
+<div class="row">
+    <div class="col-8 offset-2">
+    <h2>Create a New Listing</h2>
+    <form method="POST" action="/listing" novalidate class="needs-validation" enctype="multipart/form-data">
+      <div class="mb-3">
+         <label for="title" class="form-label">Title:</label>
+         <input name="listing[title]" placeholder="enter title" id="title" class="form-control" required >    
+         <div  class="valid-feedback">Title looks good!</div>
+         <div class="invalid-feedback">enter a title</div>   
+      </div>
+      <div class="mb-3">
+         <label for="description" class="form-label">Description:</label>
+         <textarea name="listing[description]" id="description" class="form-control" required></textarea>
+         <div class="invalid-feedback">Write a short description</div>
+      </div>
+      <div class="mb-3">
+        <label for="image" class="form-label">Image:</label>
+        <input name="listing[image]" type="file" class="form-control" id="image" required>
+      </div>
+       <div class="mb-3">
+        <label for="price" class="form-label">Price:</label>
+         <input name="listing[price]" type="number" placeholder="enter price" class="form-control" id="price" required>
+         <div class="invalid-feedback">Price shouldn't be empty</div>
+       </div>
+       <div  class="mb-3">
+         <label for="location" class="form-label">Location:</label>
+         <input name="listing[location]" id="location" class="form-control" placeholder="enter location" required>
+         <div class="invalid-feedback">Give location</div>
+       </div>
+          <div class="mb-3">
+         <label for="country" class="form-label" >Country:</label>
+         <input name="listing[country]" id="country" placeholder="enter country" class="form-control" required>
+         <div class="invalid-feedback">Enter country name</div>
+       </div>
+        <button class="btn btn-dark mt-3">Add</button>
+    </form>
+    
+     </div>
+     
+        </div>
